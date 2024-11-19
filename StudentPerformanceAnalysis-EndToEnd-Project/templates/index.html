@@ -1,3 +1,95 @@
-<h1>This is the landing page. Welcome !</h1>
+<!-- <h1>This is the landing page. Welcome !</h1>
 <h5>Please navigate the below url to give the user input:</h5>
-<a href="http://127.0.0.1:5000/predictdata">Click to go to home page!</a> 
+<a href="http://127.0.0.1:5000/predictdata">Click to go to home page!</a>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Analysis</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .hero-content {
+            text-align: center;
+            padding: 2rem;
+        }
+        .feature-card {
+            border: none;
+            transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 hero-content">
+                    <h1 class="display-4 mb-4">Student Performance Analysis</h1>
+                    <p class="lead mb-4">Predict student performance using advanced machine learning algorithms. Make data-driven decisions to improve academic outcomes.</p>
+                    <a href="{{ url_for('predict_datapoint') }}" class="btn btn-light btn-lg px-4">
+                        Start Prediction
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">📊</div>
+                            <h5 class="card-title">Accurate Predictions</h5>
+                            <p class="card-text">Using advanced machine learning models to provide accurate performance predictions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">🎯</div>
+                            <h5 class="card-title">Multiple Factors</h5>
+                            <p class="card-text">Considers various factors including test scores, demographics, and preparation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">📈</div>
+                            <h5 class="card-title">Instant Results</h5>
+                            <p class="card-text">Get immediate insights into predicted performance and contributing factors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
